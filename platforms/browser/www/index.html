@@ -216,12 +216,13 @@ var browserGeolocationFail = function(error) {
  function ajaxDrinkPost(){
     var data= {
         "user":currentUserId=document.getElementById('userINPUT').value.toLowerCase(),
-        "alcohol":currentUserId=document.getElementById('alcoholINPUT').value.toLowerCase(),
+        "alcohol":currentUserId=document.getElementById('alcoholINPUT').value,
         "alcoholDetail":currentUserId=document.getElementById('alcoholDetailINPUT').value.toLowerCase(),
         "latitude":currentUserId=document.getElementById('latitudeINPUT').value.toLowerCase(),
         "longitude":currentUserId=document.getElementById('longitudeINPUT').value.toLowerCase(),
 
    }
+   console.log(data);
    
     $.ajax({
                 "type": "POST",
