@@ -131,6 +131,7 @@
         <input id="latitudeINPUT" type="text" name="phone" placeholder="Latitude">
         <input id="longitudeINPUT" type="text" name="phone" placeholder="Longitude">
        <button class="wowbutton" onClick="ajaxDrinkPost()">POST</button>
+       <div id="done"></div>
         </div>
         <div id="console"></div>
     </div>
@@ -230,7 +231,7 @@ var browserGeolocationFail = function(error) {
                 "url": "http://www.drinktodetl.com/api/dtdmap/create/",
                 "data": data,
                 "success": function(result) {
-                    // taskRetriever();
+                    document.getElementById("done").innerHTML="Posted!";
                 },
                 "error": function(error){
                 }
